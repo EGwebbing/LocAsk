@@ -23,7 +23,7 @@ var correct;
 function getDistanceFromPoint(position) {
 	// accessing to the geojson coordinates
 	var myJson = pointlayer.toGeoJSON().features; // toGeoJSON method from https://leafletjs.com/reference-1.3.0.html
-	var searchRadius = 0.1
+	var searchRadius = 0.5
 	var minDist = [] // empty list that will be filled dwith the distances from each point of interest
 	// The for loop calculate the distance of the user from each point of interest
 	for (var i=0; i < myJson.length; i++){

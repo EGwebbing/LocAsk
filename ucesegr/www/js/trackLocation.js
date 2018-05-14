@@ -18,9 +18,9 @@ function trackLocation(){
 // The function allows to display the user's position on the map
 function showPosition(position){
 	if (oldMarker){
-		mymap.removeLayer(oldMarker); // the method remove the previous markes
+		mymap.removeLayer(oldMarker); // the method remove the previous markers
 	}
 	document.getElementById('showLocation').innerHTML = " Your coordinates - Latitude: " + position.coords.latitude + " Longitude: " + position.coords.longitude;
-	oldMarker = L.circleMarker([position.coords.latitude,position.coords.longitude], {radius: 10}).addTo(mymap).bindPopup("current location").openPopup();
-	mymap.setView([position.coords.latitude, position.coords.longitude], 15); // a new marker is placed on the map, on the current location
+	oldMarker = L.circleMarker([position.coords.latitude,position.coords.longitude], {radius: 5}).addTo(mymap).bindPopup("current location").openPopup();
+	mymap.setView([position.coords.latitude, position.coords.longitude], 25); // a new marker is placed on the map, on the current location
 }
