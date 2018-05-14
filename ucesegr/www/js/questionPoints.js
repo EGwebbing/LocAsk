@@ -13,7 +13,7 @@ var client;
 // create the code to get the GeoJSON data using an XMLHttpRequest
 function getPoint() {
 	client = new XMLHttpRequest();
-	client.open('GET','http://developer.cege.ucl.ac.uk:30295/getGeoJSON/questionform/geom');
+	client.open('GET','http://developer.cege.ucl.ac.uk:30295/getGeoJSON/appdata/geom');
 	client.onreadystatechange = pointResponse; 
 	client.send();
 }
